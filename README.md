@@ -1,10 +1,24 @@
 
 
-# Projekt-Idee: Webapplikation
+# Projekt-Idee: Webapplikation (ElProfessor)
 
-## Progressionstracking
+## Abstract
 
-Die Progressionsrate und der gesamte Workload spielt im Krafttraining eine entscheidende Rolle. Die Progressionsrate gibt an, wie stark man sich im Laufe der Zeit steigern kann und zeigt somit den persönlichen Fortschritt (= Muskel- bzw. Kraftaufbau) auf. Der Workload ist das gesamte Trainingsvolumen (Gewicht x Wiederholungen x Anzahl Sätze) und ist der entscheidende Faktor für Progression. Um einen Überblick über diese zwei Grössen zu gewährleisten, werden sie in dieser App dokumentiert und mit vergangenen Werten verglichen, damit eine qualitative Aussage über den Trainingsstand und die Effektivität des derzeitigen Trainings gemacht werden kann.
+Um die einzelnen Semester des Studiums erfolgreich abzuschliessen, ist eine möglichst effiziente und stressfreie Planung der Inhalte unabdingbar. Jedes Modul hat unterschiedliche Anforderungen und wird in einer anderen Form geprüft. Während der Bearbeitung der Themenblöcke sollten die Primärziele des Studiums stehts im Auge behalten und der Überblick über die verschiednen Deadlines niemals verloren werden.
 
 
-![das Ablaufdiagramm der Webapplikation](Ablaufdiagramm_prog2.jpg)
+## Projekt
+
+Mittels einer Software werden die Module und deren wichtigste Inhalte auf einer Web-Oberfläche aufgezeigt. Zusätzlich können wichtige Infos und Daten den jeweiligen Modulen hinzugefügt werden. Zum Schluss können die wichtigsten Daten und Deadlines auf den Kalender exportiert werden.
+
+
+## Anforderungen
+
+* Importieren und speichern der Module und deren wichtigsten Inhalte (evtl. nur durch Eingabemaske möglich?)
+* Hinzufügen von Informationen und persönlichen Notizen und Abspeicherung dieser
+* Ausgabe der Deadlines und Terminplanung für den Kalender
+
+
+## FLussdiagramm (Version 1.0)
+
+![das Ablaufdiagramm der Webapplikation](Ablaufdiagramm_elprofessor.jpg)
