@@ -11,4 +11,11 @@
 <h1>Did it Work?</h1>
 <a href="{{ url_for('hello')}}">Hello</a>
 
+{% if zahl > 5 %}
+        <p>{{ zahl }} ist grösser als 5</p>
+{% else %}
+        <p>{{ zahl }} ist nicht grösser als 5</p>
+    {% endif %}
+    
+
 {% endblock %}
