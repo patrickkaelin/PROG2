@@ -7,13 +7,12 @@ def index():
 
 @app.route("/about")
 def about():
-	return """
-	<h1 style='color: red;'>I'm a red H1 heading!</h1>
-	<p>This is a lovely little paragraph</p>
-	<code>Flask is <em>awesome</em></code>
-	"""
-
+	return render_template("public/about.html")
 
 @app.route("/team")
 def team():
 	return render_template("public/team.html")
+
+@app.route("/jinja")
+def jinja():
+	return render_template("public/jinja.html")
