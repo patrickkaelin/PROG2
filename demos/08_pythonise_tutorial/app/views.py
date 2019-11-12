@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from datetime import datetime
 
 @app.route("/")
 def index():
@@ -63,10 +64,21 @@ def jinja():
 	def repeat(x, qty=1):
 	    return x * qty
 
+	date = datetime.utcnow()
+
+	my_html = "<h1>This is some HTML</h1>"
+
+	suspicious = "<script>alert('NEVER TRUST USER INPUT!')</script>"
+	
+
+
 	return render_template(
 		"public/jinja.html", my_name=my_name, my_age=my_age, langs=langs,
     friends=friends, colors=colors, cool=cool, GitRemote=GitRemote, 
-    my_remote=my_remote, repeat=repeat
+    my_remote=my_remote, repeat=repeat, date=date, my_html=my_html
     )
+
+
+
 
 
