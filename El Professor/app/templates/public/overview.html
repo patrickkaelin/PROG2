@@ -2,6 +2,20 @@
 
 {% block title %}Übersicht{% endblock %}
 
+
+{% block nav_items %}
+          <li class="nav-item">
+            <a class="nav-link active" href="/overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/modules">Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Semesters</a>
+          </li>
+{% endblock %}
+
+
 {% block main %}
 
 <div class="container">
@@ -17,7 +31,7 @@
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h4 class="list-group-item list-group-item-danger list-group-item-danger">Exams:</h4>
+  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Exams:</h5>
 	  </div>
     </div>
   </div>
@@ -50,7 +64,7 @@
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h4 class="list-group-item list-group-item-danger list-group-item-danger">Projects:</h4>
+  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Projects:</h5>
 	  </div>
     </div>
   </div>
@@ -83,7 +97,7 @@
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h4 class="list-group-item list-group-item-primary list-group-item-primary">Homework:</h4>
+  		<h5 class="list-group-item list-group-item-primary list-group-item-primary">Homework:</h5>
 	  </div>
     </div>
   </div>
@@ -116,7 +130,7 @@
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h4 class="list-group-item list-group-item-success list-group-item-success">Completed:</h4>
+  		<h5 class="list-group-item list-group-item-success list-group-item-success">Completed:</h5>
 	  </div>
     </div>
   </div>

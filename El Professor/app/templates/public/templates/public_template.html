@@ -22,15 +22,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/overview">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/modules">Modules</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Semesters</a>
-          </li>
+          {% block nav_items %}{% endblock %}
         </ul>
       </div>
 

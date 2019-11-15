@@ -2,18 +2,32 @@
 
 {% block title %}Semesters{% endblock %}
 
+{% block nav_items %}
+          <li class="nav-item">
+            <a class="nav-link" href="/overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/modules">Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Semesters</a>
+          </li>
+{% endblock %}
+
+
+
 {% block main %}
 
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Semester</h1>
+      <h1>Semesters</h1>
 
 		<select class="custom-select">
-		  <option selected>aktuelles Semester auswählen</option>
-		  <option value="1">1. Semester</option>
-		  <option value="2">2. Semester</option>
-		  <option value="3">neues Semester starten!</option>
+		  <option selected>choose current semester</option>
+		  <option value="1">1. semester</option>
+		  <option value="2">2. semester</option>
+		  <option value="3">start new semester!</option>
 		</select>
 
     </div>
