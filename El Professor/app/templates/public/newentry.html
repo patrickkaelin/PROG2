@@ -1,0 +1,76 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}New Entry{% endblock %}
+
+{% block nav_items %}
+          <li class="nav-item">
+            <a class="nav-link" href="/overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/modules">Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Semesters</a>
+          </li>
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>New Entry</h1>
+    </div>
+  </div>
+</div>
+
+
+<!-- INPUT -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <fieldset>
+          <div class="form-group">
+            <label for="disabledSelect">Select Module</label>
+            <select id="disabledSelect" class="form-control">
+              <option>Modules</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="disabledTextInput">What</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="What is it">
+          </div>
+          <div class="form-group">
+            <label for="disabledSelect">Select Type</label>
+            <select id="disabledSelect" class="form-control">
+              <option>Project</option>
+              <option>Exam</option>
+              <option>Homework</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="disabledTextInput">Date</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Date">
+          </div>
+          <div class="form-group">
+            <label for="disabledTextInput">Notes</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="More Information">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
+            <label class="form-check-label" for="disabledFieldsetCheck">
+              Can't check this
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}{% endblock %}

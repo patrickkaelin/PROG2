@@ -12,3 +12,7 @@ def overview():
 @app.route("/modules")
 def modules():
     return render_template("public/modules.html")
+
+@app.route("/newentry")
+def newentry():
+    return render_template("public/newentry.html")
