@@ -95,3 +95,10 @@ def sign_up():
         return redirect(request.url)
 
     return render_template("public/sign_up.html")
+
+
+@app.route("/profile/<username>")
+def profile(username):
+    return render_template("public/profile.html")
+
+    #doesnt work.. https://pythonise.com/series/learning-flask/generating-dynamic-urls-with-flask --> section Capturing URL variables
