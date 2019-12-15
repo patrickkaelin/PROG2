@@ -1,87 +1,97 @@
 from app import app
 from flask import render_template
 from datetime import datetime
+from flask import request, redirect
+
 
 @app.route("/")
 def index():
-	return render_template("public/index.html")
+    return render_template("public/index.html")
 
 
 @app.route("/about")
 def about():
-	return render_template("public/about.html")
+    return render_template("public/about.html")
 
 
 @app.route("/team")
 def team():
-	return render_template("public/team.html")
+    return render_template("public/team.html")
 
 
 @app.route("/jinja")
 def jinja():
-	
-	# Strings
-	my_name = "Patrick"
 
-	# Integers
-	my_age = 24
+    # Strings
+    my_name = "Patrick"
 
-	# Lists
-	langs = ["Python", "JavaScript", "Bash", "Ruby", "C", "Rust"]
+    # Integers
+    my_age = 24
 
-	# Dictionaries
-	friends = {
-	    "Tony": 43,
-	    "Cody": 28,
-	    "Amy": 26,
-	    "Clarissa": 23,
-	    "Wendell": 39
-	}
+    # Lists
+    langs = ["Python", "JavaScript", "Bash", "Ruby", "C", "Rust"]
 
-	# Tuples
-	colors = ("Red", "Blue")
+    # Dictionaries
+    friends = {
+        "Tony": 43,
+        "Cody": 28,
+        "Amy": 26,
+        "Clarissa": 23,
+        "Wendell": 39
+    }
 
-	# Booleans
-	cool = True
+    # Tuples
+    colors = ("Red", "Blue")
 
-	# Classes
-	class GitRemote:
-	    def __init__(self, name, description, domain):
-	        self.name = name
-	        self.description = description 
-	        self.domain = domain
+    # Booleans
+    cool = True
 
-	    def clone(self, repo):
-	        return f"Cloning into {repo}"
+    # Classes
+    class GitRemote:
+        def __init__(self, name, description, domain):
+            self.name = name
+            self.description = description
+            self.domain = domain
 
-	my_remote = GitRemote(
-	    name="Learning Flask",
-	    description="Learn the Flask web framework for Python",
-	    domain="https://github.com/Julian-Nash/learning-flask.git"
-	)
+    def clone(self, repo):
+        return f"Cloning into {repo}"
 
-	# Functions
-	def repeat(x, qty=1):
-	    return x * qty
-
-	date = datetime.utcnow()
-
-	my_html = "<h1>This is some HTML</h1>"
-
-	suspicious = "<script>alert('NEVER TRUST USER INPUT!')</script>"
-	
-
-
-	return render_template(
-		"public/jinja.html", my_name=my_name, my_age=my_age, langs=langs,
-    friends=friends, colors=colors, cool=cool, GitRemote=GitRemote, 
-    my_remote=my_remote, repeat=repeat, date=date, my_html=my_html
+    my_remote = GitRemote(
+        name="Learning Flask",
+        description="Learn the Flask web framework for Python",
+        domain="https://github.com/Julian-Nash/learning-flask.git"
     )
+
+    # Functions
+    def repeat(x, qty=1):
+        return x * qty
+
+    date = datetime.utcnow()
+
+    my_html = "<h1>This is some HTML</h1>"
+
+    suspicious = "<script>alert('NEVER TRUST USER INPUT!')</script>"
+
+    return render_template("public/jinja.html", my_name=my_name, my_age=my_age, langs=langs, friends=friends, colors=colors, cool=cool, GitRemote=GitRemote, my_remote=my_remote, repeat=repeat, date=date, my_html=my_html, suspicious=suspicious)
 
 
 @app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
+
+    if request.method == "POST":
+
+        req = request.form
+
+        missing = list()
+
+        for k, v in req.items():
+            if v == "":
+                missing.append(k)
+
+        if missing:
+            feedback = f"Missing fields for {', '.join(missing)}"
+            return render_template("public/sign_up.html", feedback=feedback)
+
+        return redirect(request.url)
+
     return render_template("public/sign_up.html")
-
-
-
