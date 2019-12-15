@@ -133,5 +133,14 @@ def multiple(foo, bar, baz):
     print(f"bar is {bar}")
     print(f"baz is {baz}")
 
-
     return f"foo is {foo}, bar is {bar}, baz is {baz}"
+
+
+@app.route("/json", methods=["GET", "POST"])
+def json_example():
+
+    req = request.get_json()
+
+    print(req)
+
+    return "Thanks!", 200
