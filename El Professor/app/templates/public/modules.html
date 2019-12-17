@@ -16,6 +16,13 @@
 
 {% block main %}
 
+<strong class="d-block mb-3">Modulinformationen</strong>
+  <ul>
+    {% for name, age in modulinformation.items() %}
+    <li>{{ name }}: {{ age }}</li>
+    {% endfor %}
+  </ul>
+
 <div class="container">
   <div class="row">
     <div class="col">
