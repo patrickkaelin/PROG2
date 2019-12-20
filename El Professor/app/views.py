@@ -22,20 +22,22 @@ def modules():
     return render_template("public/modules.html", modulinformation=modulinformation)
 
 
-@app.route("/newentry", methods=['GET', 'POST'])
+@app.route("/newentry/", methods=['GET', 'POST'])
 def newentry():
 
     # Senden des neuen Eintrages, Form --> newentry.html Zeile 29
     if request.method == 'POST':
         new_entry = request.form['eintrag']
-        rueckgabe_string = "Your new Entry: " + new_entry + "!"
-        # ab hier probieritis von demos:
-        # UnboundLocalError: local variable 'eintrag' referenced before assignment
-        zeitpunkt, eintrag = daten.eintrag_speichern(eintrag)
+        entry_deadline = request.form['deadline'] # wird noch nicht gespeichert
+        rueckgabe_string = "You successfully added a new entry: " + new_entry + ". Deadline: " + entry_deadline + "!"
+        zeitpunkt, new_entry = daten.eintrag_speichern(new_entry)
 
-        return rueckgabe_string
+        # return rueckgabe_string --> zeigt String nach Eingabe an
 
-    return render_template("public/newentry.html")
+        return render_template("public/newentry.html", rueckgabe_string=rueckgabe_string)
+
+    else:
+        return render_template("public/newentry.html")
 
 
 @app.route("/overview")
@@ -43,11 +45,12 @@ def overview():
     # ab hier probieritis von demos:
     eintraege = daten.eintraege_laden()
 
+    """
+    # braucht es nicht hier, solange es im HTML steht
     eintraege_liste = ""
     for key, value in eintraege.items():
         zeile = str(key) + ": " + value + "<br>"
         eintraege_liste += zeile
+    """
 
-    return eintraege_liste
-
-    return render_template("public/overview.html")
+    return render_template("public/overview.html", eintraege=eintraege)

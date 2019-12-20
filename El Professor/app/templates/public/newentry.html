@@ -19,24 +19,26 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <div class="alert alert-light" role="alert">
+          <strong>{{ rueckgabe_string}}</strong>
+      </div>
       <h1>New Entry</h1>
     </div>
   </div>
 </div>
 
 
-<!-- INPUT -->
+<!-- INPUT
 <form method="POST">
     <input type="text" name="eintrag" placeholder="Description">
     <button type="submit">Senden</button>
-</form>
+</form> -->
 
 
-<!-- 
 <div class="container">
   <div class="row">
     <div class="col">
-      <form>
+      <form method="POST" autocomplete="off">
         <fieldset>
           <div class="form-group">
             <label for="disabledSelect">Select Module</label>
@@ -49,7 +51,7 @@
           </div>
           <div class="form-group">
             <label for="disabledTextInput">What</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="What is it">
+            <input type="text" name="eintrag" id="disabledTextInput" class="form-control" placeholder="What is it">
           </div>
           <div class="form-group">
             <label for="disabledSelect">Select Type</label>
@@ -61,7 +63,7 @@
           </div>
           <div class="form-group">
             <label for="disabledTextInput">Date</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Date">
+            <input type="text" name="deadline" id="disabledTextInput" class="form-control" placeholder="Enter Date">
           </div>
           <div class="form-group">
             <label for="disabledTextInput">Notes</label>
@@ -79,7 +81,6 @@
     </div>
   </div>
 </div>
--->
 
 {% endblock %}
 
