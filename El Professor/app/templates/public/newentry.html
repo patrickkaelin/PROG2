@@ -40,6 +40,7 @@
     <div class="col">
       <form method="POST" autocomplete="off">
         <fieldset>
+          <!--
           <div class="form-group">
             <label for="disabledSelect">Select Module</label>
             <select id="disabledSelect" class="form-control">
@@ -49,10 +50,31 @@
               <option>INMA</option>
             </select>
           </div>
+        -->
           <div class="form-group">
-            <label for="disabledTextInput">What</label>
-            <input type="text" name="eintrag" id="disabledTextInput" class="form-control" placeholder="What is it">
+            <label for="disabledTextInput">Modul</label>
+            <input type="text" name="eintrag" id="disabledTextInput" class="form-control" placeholder="Type the modulname">
           </div>
+
+          <div class="form-group">
+            <label for="disabledTextInput">Typ</label>
+            <input type="text" name="typ" id="disabledTextInput" class="form-control" placeholder="Exam, Project, Presentation, Homework">
+          </div>
+
+          <div class="form-group">
+            <label for="disabledTextInput">Content</label>
+            <input type="text" name="content" id="disabledTextInput" class="form-control" placeholder="What needs to be done?">
+          </div>
+
+          <div class="form-group">
+            <label for="disabledTextInput">Deadline</label>
+            <input type="text" name="deadline" id="disabledTextInput" class="form-control" placeholder="TT.MM.JJJJ">
+          </div>
+
+
+
+
+          <!--
           <div class="form-group">
             <label for="disabledSelect">Select Type</label>
             <select id="disabledSelect" class="form-control">
@@ -63,7 +85,7 @@
           </div>
           <div class="form-group">
             <label for="disabledTextInput">Date</label>
-            <input type="text" name="deadline" id="disabledTextInput" class="form-control" placeholder="Enter Date">
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Date">
           </div>
           <div class="form-group">
             <label for="disabledTextInput">Notes</label>
@@ -75,6 +97,9 @@
               Can't check this
             </label>
           </div>
+-->
+
+
           <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </fieldset>
       </form>

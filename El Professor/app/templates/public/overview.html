@@ -41,33 +41,24 @@
 
   <div class="row">
     <div class="col">
-
-    	<ul>
-		  {% for key, value in eintraege.items() %}
-		  <li>{{ key }}: {{ value }}</li>
-		  {% endfor %}
-		</ul>
-<!--
-		eintraege_liste = ""
-    for key, value in eintraege.items():
-        zeile = str(key) + ": " + value + "<br>"
-        eintraege_liste += zeile -->
-
-
-		 <table class="table">
+    	<table class="table">
 		  <thead>
 		    <tr>
 		      <th>Modul</th>
-		      <th>Lorem</th>
+		      <th>Typ</th>
+		      <th>Content</th>
 		      <th class="text-right">Deadline</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <th scope="row">1</th>
-		      <td>Mark</td>
-		      <td class="text-right">Otto</td>
+		    {% for value in eintraege.values() %}
+		      <th scope="row">{{ value[0] }}</th>
+		      <td>{{ value[1] }}</td>
+		      <td>{{ value[2] }}</td>
+		      <td class="text-right">{{ value[3] }}</td>
 		    </tr>
+		    {% endfor %}
 		  </tbody>
 		</table>
     </div>

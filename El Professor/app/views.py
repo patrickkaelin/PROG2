@@ -27,10 +27,12 @@ def newentry():
 
     # Senden des neuen Eintrages, Form --> newentry.html Zeile 29
     if request.method == 'POST':
-        new_entry = request.form['eintrag']
-        entry_deadline = request.form['deadline'] # wird noch nicht gespeichert
-        rueckgabe_string = "You successfully added a new entry: " + new_entry + ". Deadline: " + entry_deadline + "!"
-        zeitpunkt, new_entry = daten.eintrag_speichern(new_entry)
+        modul_name = request.form['eintrag']
+        typ = request.form['typ']
+        content = request.form['content']
+        deadline = request.form['deadline']
+        rueckgabe_string = "You successfully added: " + content + " to your list. Deadline: " + deadline + "!"
+        modul_name, typ, content, deadline = daten.eintrag_speichern(modul_name)
 
         # return rueckgabe_string --> zeigt String nach Eingabe an
 
