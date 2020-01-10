@@ -53,22 +53,22 @@
         -->
           <div class="form-group">
             <label for="disabledTextInput">Modul</label>
-            <input type="text" name="eintrag" id="disabledTextInput" class="form-control" placeholder="Type the modulname">
+            <input type="text" name="eintrag" id="disabledTextInput" class="form-control" placeholder="Type the modulname" required>
           </div>
 
           <div class="form-group">
             <label for="disabledTextInput">Typ</label>
-            <input type="text" name="typ" id="disabledTextInput" class="form-control" placeholder="Exam, Project, Presentation, Homework">
+            <input type="text" name="typ" id="disabledTextInput" class="form-control" placeholder="Exam, Project, Presentation, Homework" required>
           </div>
 
           <div class="form-group">
             <label for="disabledTextInput">Content</label>
-            <input type="text" name="content" id="disabledTextInput" class="form-control" placeholder="What needs to be done?">
+            <input type="text" name="content" id="disabledTextInput" class="form-control" placeholder="What needs to be done?" required>
           </div>
 
           <div class="form-group">
             <label for="disabledTextInput">Deadline</label>
-            <input type="text" name="deadline" id="disabledTextInput" class="form-control" placeholder="TT.MM.JJJJ">
+            <input type="date" name="deadline" id="disabledTextInput" class="form-control" placeholder="TT.MM.JJJJ" required>
           </div>
 
 
@@ -102,6 +102,11 @@
 
           <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </fieldset>
+
+        {% if feedback %}
+          <p class="text-danger float-right">{{ feedback }}</p>
+        {% endif %}
+
       </form>
     </div>
   </div>

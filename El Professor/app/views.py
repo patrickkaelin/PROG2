@@ -31,12 +31,14 @@ def newentry():
         typ = request.form['typ']
         content = request.form['content']
         deadline = request.form['deadline']
+
         rueckgabe_string = "You successfully added: " + content + " to your list. Deadline: " + deadline + "!"
         modul_name, typ, content, deadline = daten.eintrag_speichern(modul_name)
 
+
         # return rueckgabe_string --> zeigt String nach Eingabe an
 
-        return render_template("public/newentry.html", rueckgabe_string=rueckgabe_string)
+        return render_template("public/newentry.html", rueckgabe_string=rueckgabe_string,)
 
     else:
         return render_template("public/newentry.html")
