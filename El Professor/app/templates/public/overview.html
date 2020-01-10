@@ -38,26 +38,25 @@
 	  </div>
     </div>
   </div>
-
   <div class="row">
     <div class="col">
     	<table class="table">
 		  <thead>
 		    <tr>
-		      <th>Modul</th>
-		      <th>Typ</th>
-		      <th>Content</th>
-		      <th class="text-right">Deadline</th>
+		      <th class="w-25">Modul</th>
+		      <th class="w-50">Content</th>
+		      <th class="w-25">Deadline</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		  	{% for value in eintraege.values() %}
-		    <tr>
-		      <th scope="row">{{ value[0] }}</th>
-		      <td>{{ value[1] }}</td>
-		      <td>{{ value[2] }}</td>
-		      <td class="text-right">{{ value[3] }}</td>
-		    </tr>
+		  		{% if value[1] == "Exam" %}
+			    <tr>
+			      <th scope="row">{{ value[0] }}</th>
+			      <td>{{ value[2] }}</td>
+			      <td class="text-justify">{{ value[3] }}</td>
+			    </tr>
+		    	{% endif %}
 		    {% endfor %}
 		  </tbody>
 		</table>
@@ -75,23 +74,62 @@
 	  </div>
     </div>
   </div>
-
   <div class="row">
     <div class="col">
-		 <table class="table">
+    	<table class="table">
 		  <thead>
 		    <tr>
-		      <th>Modul</th>
-		      <th>Lorem</th>
-		      <th class="text-right">Deadline</th>
+		      <th class="w-25">Modul</th>
+		      <th class="w-50">Content</th>
+		      <th class="w-25">Deadline</th>
 		    </tr>
 		  </thead>
 		  <tbody>
+		  	{% for value in eintraege.values() %}
+		  		{% if value[1] == "Project" %}
+			    <tr>
+			      <th scope="row">{{ value[0] }}</th>
+			      <td>{{ value[2] }}</td>
+			      <td class="text-justify">{{ value[3] }}</td>
+			    </tr>
+		    	{% endif %}
+		    {% endfor %}
+		  </tbody>
+		</table>
+    </div>
+  </div>
+</div>
+
+
+<!-- Presentations -->
+<div class="container mb-4">
+  <div class="row">
+	<div class="col">
+      <div class="list-group">
+  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Presentation:</h5>
+	  </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    	<table class="table">
+		  <thead>
 		    <tr>
-		      <th scope="row">1</th>
-		      <td>Mark</td>
-		      <td class="text-right">Otto</td>
+		      <th class="w-25">Modul</th>
+		      <th class="w-50">Content</th>
+		      <th class="w-25">Deadline</th>
 		    </tr>
+		  </thead>
+		  <tbody>
+		  	{% for value in eintraege.values() %}
+		  		{% if value[1] == "Presentation" %}
+			    <tr>
+			      <th scope="row">{{ value[0] }}</th>
+			      <td>{{ value[2] }}</td>
+			      <td class="text-justify">{{ value[3] }}</td>
+			    </tr>
+		    	{% endif %}
+		    {% endfor %}
 		  </tbody>
 		</table>
     </div>
@@ -104,27 +142,30 @@
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h5 class="list-group-item list-group-item-primary list-group-item-primary">Homework:</h5>
+  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Homework:</h5>
 	  </div>
     </div>
   </div>
-
   <div class="row">
     <div class="col">
-		 <table class="table">
+    	<table class="table">
 		  <thead>
 		    <tr>
-		      <th>Modul</th>
-		      <th>Lorem</th>
-		      <th class="text-right">Deadline</th>
+		      <th class="w-25">Modul</th>
+		      <th class="w-50">Content</th>
+		      <th class="w-25">Deadline</th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <th scope="row">1</th>
-		      <td>Mark</td>
-		      <td class="text-right">Otto</td>
-		    </tr>
+		  	{% for value in eintraege.values() %}
+		  		{% if value[1] == "Homework" %}
+			    <tr>
+			      <th scope="row">{{ value[0] }}</th>
+			      <td>{{ value[2] }}</td>
+			      <td class="text-justify">{{ value[3] }}</td>
+			    </tr>
+		    	{% endif %}
+		    {% endfor %}
 		  </tbody>
 		</table>
     </div>
