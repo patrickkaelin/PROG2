@@ -1,3 +1,22 @@
+@charset "utf-8";
+
+/*
+* CSS-Design
+* El Professor, Patrick Kälin, PROG2
+* Webapplikation
+*/
+
+
+
+
+
+/* Layout * * * * * * * * */
+
+
+/* Backgorund-Image */
 body {
-  background-color: #f1f1f1;
+  background-image: url("../img/mountains_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

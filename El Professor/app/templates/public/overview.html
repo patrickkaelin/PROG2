@@ -8,33 +8,30 @@
             <a class="nav-link active" href="/overview">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/modules">Modules</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Semesters</a>
+            <a class="nav-link" href="/newentry">New Entry</a>
           </li>
 {% endblock %}
 
 
 {% block main %}
 
-<div class="container">
+<div class="container text-white">
   <div class="row">
     <div class="col mb-4">
       <h1>Overview</h1>
     </div>
     <div class="col mb-4 text-center">
-      <a role="button" href="/newentry" class="btn btn-success btn-lg float-right">+  Add Entry</a>
+      <a role="button" href="/newentry" class="btn btn-primary btn-lg float-right">+  Add Entry</a>
     </div>
   </div>
 </div>
 
 <!-- EXAMS -->
-<div class="container mb-4">
+<div class="container mb-4 text-white">
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Exams:</h5>
+  		<h5 class="list-group-item list-group-item-primary list-group-item-primary">Exams:</h5>
 	  </div>
     </div>
   </div>
@@ -66,11 +63,11 @@
 
 
 <!-- PROJECTS -->
-<div class="container mb-4">
+<div class="container mb-4 text-white">
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Projects:</h5>
+  		<h5 class="list-group-item list-group-item-primary list-group-item-primary">Projects:</h5>
 	  </div>
     </div>
   </div>
@@ -102,11 +99,11 @@
 
 
 <!-- Presentations -->
-<div class="container mb-4">
+<div class="container mb-4 text-white">
   <div class="row">
 	<div class="col">
       <div class="list-group">
-  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Presentation:</h5>
+  		<h5 class="list-group-item list-group-item-primary list-group-item-primary">Presentation:</h5>
 	  </div>
     </div>
   </div>
@@ -136,77 +133,6 @@
   </div>
 </div>
 
-
-<!-- HOMEWORK -->
-<div class="container mb-4">
-  <div class="row">
-	<div class="col">
-      <div class="list-group">
-  		<h5 class="list-group-item list-group-item-danger list-group-item-danger">Homework:</h5>
-	  </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-    	<table class="table">
-		  <thead>
-		    <tr>
-		      <th class="w-25">Modul</th>
-		      <th class="w-50">Content</th>
-		      <th class="w-25">Deadline</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		  	{% for value in eintraege.values() %}
-		  		{% if value[1] == "Homework" %}
-			    <tr>
-			      <th scope="row">{{ value[0] }}</th>
-			      <td>{{ value[2] }}</td>
-			      <td>{{ value[3] }}</td>
-			    </tr>
-		    	{% endif %}
-		    {% endfor %}
-		  </tbody>
-		</table>
-    </div>
-  </div>
-</div>
-
-
-<!-- COMPLETED -->
-<div class="container mb-4">
-  <div class="row">
-	<div class="col">
-      <div class="list-group">
-  		<h5 class="list-group-item list-group-item-success list-group-item-success">Completed:</h5>
-	  </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-    	<table class="table">
-		  <thead>
-		    <tr>
-		      <th class="w-25">Modul</th>
-		      <th class="w-50">Content</th>
-		      <th class="w-25">Deadline</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		  	{% for value in eintraege.values() %}
-		  		{% if value[1] == "Homework" %}
-			    <tr>
-			      <th scope="row">{{ value[0] }}</th>
-			      <td>{{ value[2] }}</td>
-			      <td>{{ value[3] }}</td>
-			    </tr>
-		    	{% endif %}
-		    {% endfor %}
-		  </tbody>
-		</table>
-    </div>
-  </div>
-</div>
 
 
 

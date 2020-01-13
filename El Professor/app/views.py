@@ -3,23 +3,23 @@ from flask import render_template
 from flask import request
 from app import daten
 
+import csv
+import random
+import itertools
+
 
 @app.route("/")
 def index():
-    return render_template("public/index.html")
 
+    path = "data/motivationquotes.csv"
+    file = open(path)
+    quotes = csv.reader(file)
+    lines = [line for line in quotes]
+    merged = list(itertools.chain(*lines))
 
-@app.route("/modules")
-def modules():
+    random_quote = str(random.choice(merged))
 
-    # Dictionary mit den Modulinformation
-    modulinformation = {
-        "MIKR": "schriftlich",
-        "ENG": "elektronisch",
-        "INMA": "projektarbeit (100%)"
-    }
-
-    return render_template("public/modules.html", modulinformation=modulinformation)
+    return render_template("public/index.html", random_quote=random_quote)
 
 
 @app.route("/newentry/", methods=['GET', 'POST'])
@@ -48,13 +48,5 @@ def newentry():
 def overview():
     # ab hier probieritis von demos:
     eintraege = daten.eintraege_laden()
-
-    """
-    # braucht es nicht hier, solange es im HTML steht
-    eintraege_liste = ""
-    for key, value in eintraege.items():
-        zeile = str(key) + ": " + value + "<br>"
-        eintraege_liste += zeile
-    """
 
     return render_template("public/overview.html", eintraege=eintraege)
