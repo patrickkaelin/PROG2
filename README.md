@@ -1,24 +1,24 @@
 
 
-# Projekt-Idee: Webapplikation (ElProfessor)
+# Projekt-Idee: Webapplikation (El Professor)
 
 ## Abstract
 
-Um die einzelnen Semester des Studiums erfolgreich abzuschliessen, ist eine möglichst effiziente und stressfreie Planung der Inhalte unabdingbar. Jedes Modul hat unterschiedliche Anforderungen und wird in einer anderen Form geprüft. Während der Bearbeitung der Themenblöcke sollten die Primärziele des Studiums stehts im Auge behalten und der Überblick über die verschiednen Deadlines niemals verloren werden.
+Um die einzelnen Semester des Studiums erfolgreich abzuschliessen, ist eine möglichst effiziente und stressfreie Planung der Inhalte unabdingbar. Ausserdem ist es essenziell die wichtigsten Ziele nicht aus den Augen zu verlieren. Denn schlussendlich entscheiden wenige Tätigkeiten über das erfolgreiche abschliessen des Semesters. Diese Tätigkeiten haben meist die Form einer Abschlussprüfung, einer wichtigen Präsentation oder einer Projektarbeit. Diese Dinge sollten also mit oberster Priorität behandelt und nicht aus den Augen verloren werden.
 
 
 ## Projekt
 
-Mittels einer Software werden die Module und deren wichtigste Inhalte auf einer Web-Oberfläche aufgezeigt. Zusätzlich können wichtige Infos und Daten den jeweiligen Modulen hinzugefügt werden. Zum Schluss können die wichtigsten Daten und Deadlines auf den Kalender exportiert werden.
+Mittels einer Software können die wichtigsen Tätigkeiten innerhalb eines Semesters (Prüfungen, Präsentationen, Projekte) erfasst werden. Die Einträge werden über eine Eingabemaske getätigt und neben der Art des Eintrages können weitere Informationen erfasst werden. Alle Einträge werden kategorisch in einer Übersicht gespeichert und sind so schnell und einfach ersichtlich. Ausserdem variieren unterschiedliche Zitate auf der Startseite, um für zusätzliche Lernmotivation zu sorgen.
 
 
 ## Anforderungen
 
-* Importieren und speichern der Module und deren wichtigsten Inhalte (evtl. nur durch Eingabemaske möglich?)
-* Hinzufügen von Informationen und persönlichen Notizen und Abspeicherung dieser
-* Ausgabe der Deadlines und Terminplanung für den Kalender
+* Eingabe und Speicherung der wichtigsten Tätigkeiten (Prüfungen, Präsentationen, Projekte) innerhalb des Semesters mitthilfe einer Eingabemaske
+* Sortieren der abgespeicherten Einträge in Kategorien
+* Übersicht über alle wichtigen Einträge
 
 
-## FLussdiagramm (Version 1.0)
+## FLussdiagramm (Version 2.0)
 
-![das Ablaufdiagramm der Webapplikation](Ablaufdiagramm_elprofessor.jpg)
+![das Ablaufdiagramm der Webapplikation](data/Ablaufdiagramm_elprofessor.png)
