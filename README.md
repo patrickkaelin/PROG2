@@ -19,6 +19,6 @@ Mittels einer Software können die wichtigsen Tätigkeiten innerhalb eines Semes
 * Übersicht über alle wichtigen Einträge
 
 
-## FLussdiagramm (Version 2.0)
+## Flussdiagramm (Version 2.0)
 
 ![das Ablaufdiagramm der Webapplikation](data/Ablaufdiagramm_elprofessor.png)
