@@ -1,17 +1,21 @@
 from datetime import datetime
 import json
 from flask import request
-# von persistente daten demos
 
 
-def speichern(datei, key, value1, value2, value3, value4): #hier geändert values hinzugefügt
+def speichern(datei, key, value1, value2, value3, value4):
+    """
+    opens JSON-file
+    and saves all input-values in it
+
+    """
     try:
         with open(datei) as open_file:
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = {}
 
-    datei_inhalt[str(key)] = value1, value2, value3, value4 #hier geändert values hinzugefügt
+    datei_inhalt[str(key)] = value1, value2, value3, value4
 
     print(datei_inhalt)
 
@@ -20,17 +24,27 @@ def speichern(datei, key, value1, value2, value3, value4): #hier geändert value
 
 
 def eintrag_speichern(eintrag):
+    """
+    assigns inputs to a variable
+    returns all the information
+
+    """
     datei_name = "eintraege.json"
     zeitpunkt = datetime.now()
     modul_name = request.form['eintrag']
     typ = request.form['typ']
     content = request.form['content']
     deadline = request.form['deadline']
-    speichern(datei_name, zeitpunkt, eintrag, typ, content, deadline) # 3 hinzugefügt
-    return eintrag, typ, content, deadline # zeitpunkt entfertn, 3 hinzugefügt
+    speichern(datei_name, zeitpunkt, eintrag, typ, content, deadline)
+    return eintrag, typ, content, deadline
 
 
 def eintraege_laden():
+    """
+    loads JSON-file if there's one
+    otherwise creates a new, empty JSON-file
+
+    """
     datei_name = "eintraege.json"
 
     try:

@@ -10,7 +10,11 @@ import itertools
 
 @app.route("/")
 def index():
+    """
+    Homepage
+    Function opens, reads and returns random motivationquotes from a csv-file
 
+    """
     path = "data/motivationquotes.csv"
     file = open(path)
     quotes = csv.reader(file)
@@ -24,19 +28,22 @@ def index():
 
 @app.route("/newentry/", methods=['GET', 'POST'])
 def newentry():
+    """
+    New Entry Page
+    Function saves all the informations from the input-fields in a JSON-file
+    Returns a message after submit
 
-    # Senden des neuen Eintrages, Form --> newentry.html Zeile 29
+    """
     if request.method == 'POST':
         modul_name = request.form['eintrag']
         typ = request.form['typ']
         content = request.form['content']
         deadline = request.form['deadline']
 
+
         rueckgabe_string = "You successfully added: " + content + " to your list. Deadline: " + deadline + "!"
         modul_name, typ, content, deadline = daten.eintrag_speichern(modul_name)
 
-
-        # return rueckgabe_string --> zeigt String nach Eingabe an
 
         return render_template("public/newentry.html", rueckgabe_string=rueckgabe_string)
 
@@ -46,7 +53,11 @@ def newentry():
 
 @app.route("/overview")
 def overview():
-    # ab hier probieritis von demos:
+    """
+    Overview-Page
+    Returns all entries categorically
+
+    """
     eintraege = daten.eintraege_laden()
 
     return render_template("public/overview.html", eintraege=eintraege)

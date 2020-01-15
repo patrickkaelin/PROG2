@@ -3,16 +3,22 @@
 {% block title %}New Entry{% endblock %}
 
 {% block nav_items %}
-          <li class="nav-item">
-            <a class="nav-link" href="/overview">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/newentry">New Entry</a>
-          </li>
+
+<!-- Navigation -->
+<li class="nav-item">
+  <a class="nav-link" href="/overview">Overview</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="/newentry">New Entry</a>
+</li>
+
 {% endblock %}
+
+
 
 {% block main %}
 
+<!-- Bootstrap alert with return-message (appears after submit) -->
 <div class="container">
   <div class="row">
     <div class="col">
@@ -25,25 +31,22 @@
 </div>
 
 
-<!-- INPUT
-<form method="POST">
-    <input type="text" name="eintrag" placeholder="Description">
-    <button type="submit">Senden</button>
-</form> -->
-
-
+<!-- Form -->
 <div class="container text-white">
   <div class="row">
     <div class="col">
       <form method="POST" autocomplete="off">
         <fieldset>
+
+          <!-- Input Modul -->
           <div class="form-group">
-            <label for="disabledTextInput">Modul</label>
-            <input type="text" name="eintrag" id="disabledTextInput" class="form-control" placeholder="Type the modulname" required>
+            <label for="TextInput">Modul</label>
+            <input type="text" name="eintrag" id="TextInput" class="form-control" placeholder="Type the modulname" required>
           </div>
 
+          <!-- Select Typ -->
           <div class="form-group">
-            <label for="disabledTextInput">Select Typ</label>
+            <label for="TextInput">Select Typ</label>
             <select class="custom-select" name="typ">
               <option value="Exam" required>Exam</option>
               <option value="Project" required>Project</option>
@@ -51,18 +54,19 @@
             </select>
           </div>
 
+          <!-- Input Content -->
           <div class="form-group">
-            <label for="disabledTextInput">Content</label>
-            <input type="text" name="content" id="disabledTextInput" class="form-control" placeholder="What needs to be done?" required>
+            <label for="TextInput">Content</label>
+            <input type="text" name="content" id="TextInput" class="form-control" placeholder="What needs to be done?" required>
           </div>
 
+          <!-- Input Deadline -->
           <div class="form-group">
-            <label for="disabledTextInput">Deadline</label>
-            <input type="date" name="deadline" id="disabledTextInput" class="form-control" placeholder="TT.MM.JJJJ" required>
+            <label for="TextInput">Deadline</label>
+            <input type="date" name="deadline" id="TextInput" class="form-control" placeholder="TT.MM.JJJJ" required>
           </div>
 
-
-
+          <!-- Submit Button -->
           <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </fieldset>
 

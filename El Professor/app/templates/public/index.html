@@ -1,14 +1,16 @@
 {% extends "public/templates/public_template.html" %}
 
-{% block title %}Startseite{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block nav_items %}
-          <li class="nav-item">
-            <a class="nav-link" href="/overview">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/newentry">New Entry</a>
-          </li>
+
+<!-- Navigation -->
+<li class="nav-item">
+  <a class="nav-link" href="/overview">Overview</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/newentry">New Entry</a>
+</li>
 
 {% endblock %}
 
@@ -16,11 +18,12 @@
 
 {% block main %}
 
+<!-- Text and random motivationquotes from CSV-file -->
 <div class="container">
   <div class="row">
     <div class="col">
       <h1 class="text-center text-white font-weight-light">Welcome!</h1>
-      <p>
+      <p>Lorem Ipsum set Dolor</p>
       <h3 class="text-center font-italic text-white mt-5">
           {{ random_quote }}
       </h3>

@@ -1,16 +1,20 @@
 {% extends "public/templates/public_template.html" %}
 
-{% block title %}Übersicht{% endblock %}
+{% block title %}Overview{% endblock %}
 
 
 {% block nav_items %}
-          <li class="nav-item">
-            <a class="nav-link active" href="/overview">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/newentry">New Entry</a>
-          </li>
+
+<!-- Navigation -->
+<li class="nav-item">
+	<a class="nav-link active" href="/overview">Overview</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" href="/newentry">New Entry</a>
+</li>
+
 {% endblock %}
+
 
 
 {% block main %}
@@ -20,13 +24,14 @@
     <div class="col mb-4">
       <h1>Overview</h1>
     </div>
+    <!-- + Add Entry Button -->
     <div class="col mb-4 text-center">
       <a role="button" href="/newentry" class="btn btn-primary btn-lg float-right">+  Add Entry</a>
     </div>
   </div>
 </div>
 
-<!-- EXAMS -->
+<!-- Exams Section -->
 <div class="container mb-4 text-white">
   <div class="row">
 	<div class="col">
@@ -62,7 +67,7 @@
 </div>
 
 
-<!-- PROJECTS -->
+<!-- Projects Section -->
 <div class="container mb-4 text-white">
   <div class="row">
 	<div class="col">
@@ -98,7 +103,7 @@
 </div>
 
 
-<!-- Presentations -->
+<!-- Presentation Section -->
 <div class="container mb-4 text-white">
   <div class="row">
 	<div class="col">
@@ -132,10 +137,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 {% endblock %}
 
