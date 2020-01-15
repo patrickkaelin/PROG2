@@ -22,3 +22,11 @@ Mittels einer Software können die wichtigsen Tätigkeiten innerhalb eines Semes
 ## Flussdiagramm (Version 2.0)
 
 ![das Ablaufdiagramm der Webapplikation](data/Ablaufdiagramm_elprofessor.png)
+
+
+## Anleitung zur Benutzung von El Professor
+
+1. Nachdem die Webapp gestartet wurde, befindet sich der User auf der Home-Seite und wird Willkommen geheissen. Auf dieser Seite findet sich eine kurze Beschreibung der App. Ausserdem werden hier zufällig wiedergegebene Zitate von historisch bedeutsamen Personen angezeigt, welche dem User die nötige Motivation verschaffen sollen.
+
+
+2. 
