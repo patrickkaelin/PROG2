@@ -24,30 +24,36 @@ Mittels einer Software können die wichtigsen Tätigkeiten innerhalb eines Semes
 ![das Ablaufdiagramm der Webapplikation](data/Ablaufdiagramm_elprofessor.png)
 
 
-## Anleitung zur Benutzung von El Professor
+## Benutzeranleitung von El Professor
 
 1. Nachdem die Webapp gestartet wurde, befindet sich der User auf der Home-Seite und wird Willkommen geheissen. Auf dieser Seite findet sich eine kurze Beschreibung der App. Ausserdem werden hier zufällig wiedergegebene Zitate von historisch bedeutsamen Personen angezeigt, welche dem User die nötige Motivation verschaffen sollen.
 ![Screenshot Homepage](data/01_Homepage_elprofessor.png)
+
 
 
 2. Auf der Overview-Seite wird eine Übersicht angezeigt, in welcher die Einträge unter den Kategorien "Exams", "Projects" und "Presentations" angezeigt werden. Falls noch kein Eintrag vorhanden ist, kann über den Button "+Add Entry" ein neuer Eintrag erfasst werden.
 ![Screenshot Categories](data/02_Categories_elprofessor.png)
 
 
+
 3. Auf der NewEntry-Seite befindet sich eine Eingabemaske.
 ![Screenshot Eingabemaske](data/03_newentry_empty_elprofessor.png)
+
 
 
 4. Hier können die wichtigsten Informationen rund um den Eintrag erfasst werden.
 ![Screenshot Eingabemaske ausgefüllt](data/04_newentry_full_elprofessor.png)
 
 
+
 5. Nach dem drücken des Submit-Buttons, wird eine Bestätigungsmeldung angezeigt.
 ![Screenshot Bestätigungsnachricht](data/05_return_message_elprofessor.png)
 
 
+
 6. Anschliessend erscheint der Eintrag auf der Overview-Seite in der ausgewählten Kategorie.
 ![Screenshot Übersicht Eintrag](data/06_overview_oneentry_elprofessor.png)
+
 
 
 7. So kann man alle wichtigen Tätigkeiten des Semesters erfassen und verliert nie das wesentliche aus den Augen.
